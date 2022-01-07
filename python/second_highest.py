@@ -3,8 +3,7 @@ def get_second_highest(lst):
     s_highest = 0
     for el in lst:
         if el > f_highest:
-            s_highest = f_highest
-            f_highest = el
+            s_highest, f_highest = f_highest, el
         elif s_highest < el < f_highest:
             s_highest = el
         # end if/else
