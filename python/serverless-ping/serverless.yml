@@ -1,0 +1,14 @@
+service: aws-python-simple-http-endpoint
+
+provider:
+  name: aws
+  runtime: python3.8
+  versionFunctions: false
+
+functions:
+  currentTime:
+    handler: handler.endpoint
+    events:
+      - http:
+          path: ping
+          method: get
